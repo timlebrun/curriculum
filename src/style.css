@@ -1,0 +1,63 @@
+@import 'reset.css';
+
+* {box-sizing: border-box; -webkit-print-color-adjust: exact;}
+
+@page { 
+    size: auto;
+    margin: 0 0 0 0;  
+} 
+
+
+html {min-height: 100vh; font-size: 10pt;}
+body {display: flex; flex-flow: row-reverse; font-family: Montserrat; font-weight: 300; min-height: 100vh; font-size: 10pt; line-height: 1.4em;}
+aside {background: #222 no-repeat; position: relative; background-size: 140%; background-image: url('./avatar.jpg'); min-height: 100%; flex: 3; color: #fff; padding: 2rem; z-index: 1000; display: flex; justify-content: flex-end; flex-direction: column; }
+aside .side-overlay {z-index: 10; position: absolute; left: 0; right: 0; top: 0; padding: 80% 0; background: linear-gradient(to top, #222,#222,transparent, transparent, transparent)}
+aside section {margin-bottom: 2em; z-index: 100;}
+aside i {width: 1.2rem; height: 100%; text-align: center;}
+aside address {margin-bottom: 1rem;}
+aside p:not(.lead) {font-size: 8pt;}
+main {flex: 6; z-index: 10;}
+
+h1 {font-size: 2.4rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; margin-top: 1em;}
+h2 {font-size: 1.6rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; font-family: Quicksand;}
+h3 {text-transform: uppercase; font-weight: 600; font-family: Quicksand; }
+p {margin-bottom: 1rem;}
+
+p.lead {text-transform: uppercase; opacity: .6;}
+
+strong {font-weight: 600;}
+legend {font-size: 8pt; text-transform: uppercase; opacity: .6;}
+address {font-family: Georgia;}
+main h2 {color: #fff; padding: 2rem 3rem; background: #383838; }
+main h2 i {transform: scale(2.4);opacity: .4;}
+
+section#parcours .timeline {margin: 2rem;}
+section#parcours .timeline address {color: #9f3536;}
+
+
+section#competences > ul {margin: 2rem 3rem; columns: 2; padding-left: 1em;}
+section#competences > ul > li {margin-bottom: 1rem; break-inside: avoid; break-after: auto; position: relative;}
+section#competences h3 { position: relative; }
+section#competences h3 i.fa {position: absolute; left: -1.6em; top: 50%; line-height: 0; }
+/* section#competences > ul > li i.fa {position: absolute; top: 0; right: 1rem; opacity: .2; font-size: 3rem;} */
+section#competences > ul > li:last-of-type {margin-bottom: 0;}
+section#competences > ul > li *:not(h3) {opacity: .8;}
+section#competences > ul > li ul {text-transform: uppercase; font-size: 8pt;}
+
+section#experience ol {margin: 2rem 3rem;}
+section#experience ol li {margin-bottom: 1rem;}
+section#experience time {display: inline-block; text-transform: uppercase; color: #9f3536;}
+section#experience h3 {display: inline-block;}
+
+section#interests ul {font-size: 0;}
+section#interests ul li::before {content: '●'; color: #222; margin-right: .5ch;}
+
+.timeline ul, .timeline ol { margin-left: 70px; }
+.timeline li {border-left: 3px solid gray; position: relative; padding: 0 0 1rem 20px;}
+.timeline li::before {content: ''; display: block; height: 10pt; width: 10pt; border-radius: 50%; background: gray; border: 5pt solid white; position: absolute; left: -11pt; top: 0;}
+.timeline li:last-child {border-left: 4px dotted gray;}
+.timeline li.timeline-future {border-left: 4px dotted gray;}
+.timeline li.timeline-future::before {display: none;}
+.timeline li time {position: absolute; display: block; font-weight: 600; opacity: .4; width: 60px; top: 0; left: -80px; text-align: right;}
+
+.tag {display: inline-block; text-transform: uppercase; font-size: 8pt; background: rgba(128,128,128,.8); border-radius: 2pt; padding: .2em .4em; margin: 0 5pt 5pt 0;}

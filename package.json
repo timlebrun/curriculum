@@ -1,0 +1,14 @@
+{
+  "name": "curriculum",
+  "version": "1.0.0",
+  "description": "",
+  "main": "curiculum.js",
+  "scripts": {
+    "export": "node curriculum.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "1.13"
+  }
+}
