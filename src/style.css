@@ -1,4 +1,5 @@
 @import 'reset.css';
+@import 'fonts.css';
 
 * {box-sizing: border-box; -webkit-print-color-adjust: exact;}
 
@@ -27,7 +28,7 @@ p.lead {text-transform: uppercase; opacity: .6;}
 
 strong {font-weight: 600;}
 legend {font-size: 8pt; text-transform: uppercase; opacity: .6;}
-address {font-family: Georgia;}
+address {font-family: Georgia, serif;}
 main h2 {color: #fff; padding: 2rem 3rem; background: #383838; }
 main h2 i {transform: scale(2.4);opacity: .4;}
 
