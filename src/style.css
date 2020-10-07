@@ -36,14 +36,15 @@ section#parcours .timeline {margin: 2rem;}
 section#parcours .timeline address {color: #9f3536;}
 
 
-section#competences > ul {margin: 2rem 3rem; columns: 2; padding-left: 1em;}
-section#competences > ul > li {margin-bottom: 1rem; break-inside: avoid; break-after: auto; position: relative;}
+section#competences > ul { margin: 2rem 3rem; columns: 2; padding-left: 1em; }
+section#competences > ul > li { margin-bottom: 1rem; break-inside: avoid; break-after: auto; position: relative; }
 section#competences h3 { position: relative; margin-bottom: .4rem; }
-section#competences h3 i.fa {position: absolute; left: -1.6em; top: 50%; line-height: 0; }
-/* section#competences > ul > li i.fa {position: absolute; top: 0; right: 1rem; opacity: .2; font-size: 3rem;} */
-section#competences > ul > li:last-of-type {margin-bottom: 0;}
-section#competences > ul > li *:not(h3) {opacity: .8;}
-section#competences > ul > li ul {text-transform: uppercase; font-size: 8pt;}
+section#competences h3 i.fa { position: absolute; left: -1.6em; top: 50%; line-height: 0; opacity: .4; }
+/* section#competences > ul > li i.fa { position: absolute; left: -1.2em; opacity: .2; font-size: 2rem;} */
+section#competences > ul > li:last-of-type { margin-bottom: 0; }
+section#competences > ul > li *:not(h3) { opacity: .8; }
+section#competences > ul > li ul { text-transform: uppercase; font-size: 8pt; font-weight: 500; }
+section#competences > ul > li ul span { margin-left: .4em; font-weight: 400; opacity: .6; }
 
 section#experience ol {margin: 2rem 3rem;}
 section#experience ol li {margin-bottom: 1rem;}
