@@ -10,6 +10,7 @@ const curriculum = join(__dirname, 'src/index.html');
 
   console.log('Loading template...');
   await page.goto('file:///' + curriculum, { waitUntil: 'networkidle2' });
+  await page.waitForFunction(() => document.fonts.ready);
 
   console.log('Exporting as a PDF file...');
   await page.pdf({ path: 'dist/curriculum.pdf', format: 'A4', pageRanges: '1' });
