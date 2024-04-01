@@ -13,12 +13,16 @@
 } 
 
 :root {
+    --color-primary: #e8b600;
+
     --aside-width: 80px;
     --timeline-line-color: rgba(0, 0, 0, 0.1);
+
+    --decobar-width: 1.2rem;
 }
 
 html { min-height: 100vh; font-size: 9pt; }
-body { position: relative; font-family: Montserrat; font-weight: 300; min-height: 100vh;  line-height: 1.2em;}
+body { position: relative; font-family: Montserrat; font-weight: 300; min-height: 100vh; line-height: 1em; display: flex; align-items: center;}
 
 body > aside {
     background: #010101;
@@ -40,46 +44,63 @@ body > aside {
 
     padding: 2rem;
 }
+
+body::after {
+    content: "";
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    width: var(--decobar-width);
+    background-color: var(--color-primary);
+}
+
 aside h1 { display: block; font-size: 4rem; text-transform: uppercase; font-weight: 600; margin: 0; }
 aside p { margin-bottom: .1em; font-size: .9rem; }
 aside p i { width: 1.6rem; text-align: center; opacity: .6; }
-aside .badges { text-align: center; }
+aside h3 { text-transform: uppercase; opacity: .4; font-weight: 200; margin-bottom: .4em; }
 
-body > main { margin-left: var(--aside-width); padding: 2rem; }
+body > main {
+    margin-left: var(--aside-width);
+    margin-right: var(--decobar-width);
+    padding: 2rem;
+}
 
-p { margin-bottom: 1rem; }
 h1 {font-size: 2.4rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; margin-top: 1em;}
 h2 { font-size: 1.8rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem;}
 h3 { font-weight: 600; }
 h4 { font-weight: 600; }
-
-p.lead {text-transform: uppercase; opacity: .6;}
 
 strong {font-weight: 600;}
 address {font-family: Georgia, serif; font-style: italic; }
 body > main h2 {color: #fff; padding: 2rem 3rem; background: #383838; }
 body > main h2 i {transform: scale(2.4);opacity: .4;}
 
-section#parcours .timeline address { color: #e8c100; margin-bottom: 1em; }
+section#parcours .timeline address { color: var(--color-primary); margin-bottom: 1em; }
+section#parcours .timeline .fancy { opacity: .5; }
+
 section#parcours .timeline :last-child { margin-bottom: 0; }
-section#parcours .timeline h3 { font-size: 1.2rem; }
+section#parcours .timeline h3 { font-size: 1.2rem; margin-bottom: .4em; }
 section#parcours .timeline main h4 { margin: .8em 0 .4em; }
-section#parcours .timeline main h4 small { display: block; opacity: .4; font-size: .8em; font-weight: 200; margin-top: -2pt; }
-section#parcours .timeline main p { margin: .3em 0; }
+section#parcours .timeline main h4 small { display: block; opacity: .4; font-size: .8em; font-weight: 200; margin-top: .2em; }
+section#parcours .timeline main p { margin: .4em 0; font-size: .9em; }
 section#parcours .timeline main ul { margin: 0 0 .2em 0; }
 /* section#parcours .timeline main li::before { content: '- ' } */
 section#parcours .timeline main li { margin: 0 0 .2em 0; }
 section#parcours .timeline main li p { opacity: .6; }
 
-section#parcours .timeline-large { padding-bottom: 2em; }
-section#parcours .timeline-large h3 { font-size: 1.8rem; line-height: 1em; color: black; }
+
+section#parcours .timeline-large { font-size: 1.1em; padding-bottom: 2em; }
+section#parcours .timeline-large h3 { font-size: 2.4rem; line-height: 1em; color: black; }
 section#parcours .timeline-large::before { background: black; }
+section#parcours .timeline-large .fancy { font-size: 1.2em; }
 
 .timeline { margin-left: 5em; }
 .timeline .timeline-job {border-left: 3pt solid var(--timeline-line-color); position: relative; padding: 0 0 1.4em 1.4em;}
 .timeline .timeline-job::before {content: ''; display: block; height: 10pt; width: 10pt; border-radius: 50%; background: gray; border: 5pt solid white; position: absolute; left: -11pt; top: 0;}
 .timeline .timeline-job:last-child {border-left: 4pt dotted var(--timeline-line-color);}
-.timeline .timeline-job time {position: absolute; display: block; font-weight: 600; opacity: .4; width: 60px; top: 10pt; left: -80px; text-align: right; line-height: 0;}
+.timeline .timeline-job .timeline-job-legend {position: absolute; display: block; width: 60px; top: 10pt; left: -80px; text-align: right; margin-top: -.5em; }
 .timeline .timeline-future { border-left: 4pt dotted var(--timeline-line-color); height: 2em; }
 .timeline .timeline-future::before {display: none;}
 
@@ -96,3 +117,5 @@ section#parcours .timeline-large::before { background: black; }
 }
 
 .badge i { width: 1.6em; text-align: left; opacity: .4; color: pink; }
+
+.fancy { font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; line-height: 1.2em; }
