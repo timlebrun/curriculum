@@ -13,7 +13,8 @@ const curriculum = join(__dirname, 'src/index.html');
   await page.waitForFunction(() => document.fonts.ready);
 
   console.log('Exporting as a PDF file...');
-  await page.pdf({ path: 'dist/curriculum.pdf', format: 'A4', pageRanges: '1' });
+  const pageHeight = await page.evaluate(() => document.body.scrollHeight);
+  await page.pdf({ path: 'dist/curriculum.pdf', width: '21cm', height: pageHeight, pageRanges: '1' });
 
   console.log('Done !')
   await browser.close();
